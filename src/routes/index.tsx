@@ -1,5 +1,5 @@
 import { component$, useSignal, useStore, useTask$ } from "@builder.io/qwik";
-import { DocumentHead, useNavigate } from "@builder.io/qwik-city";
+import { useNavigate } from "@builder.io/qwik-city";
 
 interface Info {
   count: number;
@@ -32,9 +32,6 @@ interface Character {
 export default component$(() => {
   const navigate = useNavigate();
   const page = useSignal(1);
-  const classOptions = useStore({
-    color: "text-red-400",
-  });
   const dataCharacters = useStore({
     info: {} as Info,
     characters: [] as Character[],
@@ -90,13 +87,3 @@ export default component$(() => {
     </>
   );
 });
-
-export const head: DocumentHead = {
-  title: "Rick and Morty app",
-  meta: [
-    {
-      name: "description",
-      content: "Qwik site description",
-    },
-  ],
-};

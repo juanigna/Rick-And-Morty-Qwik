@@ -1,6 +1,5 @@
-import { component$, getLocale, useSignal, useTask$ } from "@builder.io/qwik";
+import { component$, useSignal, useTask$ } from "@builder.io/qwik";
 import { useLocation, useNavigate } from "@builder.io/qwik-city";
-import React from "react";
 
 interface Character {
   id: number;
